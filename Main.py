@@ -24,7 +24,14 @@ def accept_command():
 
 def add(lst):
     """ Asks user about the car. """
-    # TODO
+    data = dict()
+    data['year'] = input('Введите год выпуска автомобиля:')
+    data['model'] = input('Введите модель автомобиля:')
+    data['producer'] = input('Введите производителя:')
+    data['body_type'] = input('Введите тип кузова:')
+
+    return lst.append(Car(year=data['year'], model=data['model'],
+                          producer=data['producer'], body_type=data['body_type']))
 
 
 def read():
