@@ -55,7 +55,11 @@ def write(lst):
 
 def show(lst):
     """ Print objects. """
-    # TODO
+    header = '|{:^10}|{:^14}|{:^12}|{:^12}'.format('Год', 'Производитель',
+                                                   'Модель', 'Тип кузова')
+    print(header)
+    for elem in lst:
+        print(elem)
 
 
 def main():
