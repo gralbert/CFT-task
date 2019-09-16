@@ -37,7 +37,7 @@ def add(lst):
 def read():
     """ Reading from the file. """
     lst = []
-    with open('items.dot') as f:
+    with open('data.dot') as f:
         for line in f.readlines():
             data = json.loads(line)
             lst.append(Car(year=data['year'], model=data['model'],
@@ -48,7 +48,9 @@ def read():
 
 def write(lst):
     """ Writing to the file. """
-    # TODO
+    with open('data.dot', 'w') as f:
+        for elem in lst:
+            print(json.dumps(elem.__dict__), file=f)
 
 
 def show(lst):
