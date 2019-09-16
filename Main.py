@@ -4,11 +4,22 @@ Developed by Grigorev Albert.
 """
 
 from CarClass import Car
+import json
 
 
 def accept_command():
     """ Asks for the command number. """
-    # TODO
+    while True:
+        command = input('Введите номер команды: ')
+        try:
+            command = int(command)
+        except TypeError:
+            pass
+
+        if command in [1, 2, 3, 4, 5]:
+            return command
+        else:
+            print('Ошибка ввода')
 
 
 def add(lst):
